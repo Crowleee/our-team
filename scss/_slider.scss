@@ -12,6 +12,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
+        z-index: 5;
 
         @include hover {
             svg {
@@ -45,23 +46,28 @@
         text-align: center;
         li {
             display: inline-block;
-        }
-    }
-    &__dot {
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 1px solid transparent;
-        background-color: $brand-color;
+            margin: 5px;
+            button {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                background-color: $brand-color;
+                font-size: 0;
 
-        &--active {
-            border-color: $brand-color;
-            background-color: transparent;
-        }
-        @include hover {
-            border-color: $brand-color;
-            background-color: transparent;
+                @include hover {
+                    border-color: $brand-color;
+                    background-color: transparent;
+                }
+            }
+            &.slick-active button {
+                border-color: $brand-color;
+                background-color: transparent;
+            }    
         }
     }
+    // &__dot {
+        
+    // }
 }
